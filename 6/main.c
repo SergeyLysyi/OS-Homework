@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 #define DEFAULT_PATH_TO_LOCKS "/tmp/"
-#define DEFAULT_LOCKFILE_SUFFIX ".lock"
+#define DEFAULT_LOCKFILE_SUFFIX ".lck"
 
 #define OPERATION_LITERAL_WRITE 'W'
 #define OPERATION_LITERAL_READ 'R'
