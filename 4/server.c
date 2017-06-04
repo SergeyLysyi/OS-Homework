@@ -56,10 +56,10 @@ void init_map(char map[][MAP_HEIGHT]) {
                     fprintf(stderr, "wrong file format: unexpected new line\n");
                     read_from_file_failed = 1;
                     break;
-                case '1':
+                case ALIVE:
                     map[i][j] = ALIVE;
                     break;
-                case '0':
+                case DEAD:
                     map[i][j] = DEAD;
                     break;
                 default:
