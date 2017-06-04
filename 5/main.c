@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include <stdbool.h>
 #include <errno.h>
+#include <limits.h>
 
 #define MAX_RETRY_LAUNCH_ATTEMPTS 50
 
@@ -82,7 +83,8 @@ void set_conf_file_path(int argc, char *argv[]) {
         printf(HELP_MSG, argv[0]);
         exit(1);
     }
-    conf_file_path = argv[1];
+    conf_file_path = malloc(PATH_MAX + 1);
+    realpath(argv[1], conf_file_path);
     return;
 }
 
